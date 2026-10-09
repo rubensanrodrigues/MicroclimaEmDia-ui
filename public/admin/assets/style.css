@@ -1,0 +1,354 @@
+/* =========================================
+   Configurações gerais
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #26344d 0%,
+            #151b27 45%,
+            #0d1118 100%
+        );
+
+    color: #f1f5f9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+/* =========================================
+   Container
+========================================= */
+
+.page {
+    width: 100%;
+    max-width: 480px;
+}
+
+
+/* =========================================
+   Card
+========================================= */
+
+.card {
+    background: rgba(20, 27, 39, 0.94);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 22px;
+
+    padding: 32px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(255, 255, 255, 0.02);
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* =========================================
+   Cabeçalho
+========================================= */
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 32px;
+}
+
+.card-header h1 {
+    margin: 0;
+
+    font-size: 22px;
+    font-weight: 650;
+
+    color: #f8fafc;
+}
+
+.card-header p {
+    margin: 6px 0 0;
+
+    font-size: 14px;
+
+    color: #94a3b8;
+}
+
+
+/* =========================================
+   Ícone da lâmpada
+========================================= */
+
+.lamp-icon {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    font-size: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #facc15,
+        #f59e0b
+    );
+
+    box-shadow:
+        0 0 25px rgba(250, 204, 21, 0.25);
+}
+
+
+/* =========================================
+   Campos
+========================================= */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 9px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #cbd5e1;
+}
+
+.label-icon {
+    font-size: 16px;
+}
+
+
+/* =========================================
+   Input de horário
+========================================= */
+
+input[type="time"] {
+    width: 100%;
+
+    height: 54px;
+
+    padding: 0 16px;
+
+    border: 1px solid #334155;
+    border-radius: 12px;
+
+    outline: none;
+
+    background: #111827;
+
+    color: #f8fafc;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+input[type="time"]:hover {
+    background: #151e2e;
+}
+
+input[type="time"]:focus {
+    border-color: #facc15;
+
+    box-shadow:
+        0 0 0 3px rgba(250, 204, 21, 0.12);
+}
+
+
+/* =========================================
+   Mensagem
+========================================= */
+
+.message {
+    min-height: 20px;
+
+    margin-top: 4px;
+    margin-bottom: 18px;
+
+    font-size: 13px;
+
+    color: #86efac;
+
+    opacity: 0;
+
+    transition: opacity 0.2s ease;
+}
+
+.message.show {
+    opacity: 1;
+}
+
+
+/* =========================================
+   Botões
+========================================= */
+
+.actions {
+    display: flex;
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+.btn {
+    height: 48px;
+
+    border: 0;
+    border-radius: 11px;
+
+    padding: 0 20px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+
+/* Cancelar */
+
+.btn-cancel {
+    flex: 1;
+
+    background: #1e293b;
+
+    color: #cbd5e1;
+}
+
+.btn-cancel:hover {
+    background: #293548;
+}
+
+
+/* Salvar */
+
+.btn-save {
+    flex: 1.2;
+
+    background: linear-gradient(
+        135deg,
+        #facc15,
+        #f59e0b
+    );
+
+    color: #171717;
+
+    box-shadow:
+        0 8px 20px rgba(245, 158, 11, 0.18);
+}
+
+.btn-save:hover {
+    box-shadow:
+        0 10px 25px rgba(245, 158, 11, 0.28);
+}
+
+
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    height: 54px;
+    padding: 0 16px;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    outline: none;
+    background: #111827;
+    color: #f8fafc;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #facc15;
+    box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.12);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.message.error {
+    color: #fca5a5;
+}
+
+/* =========================================
+   Responsividade
+========================================= */
+
+@media (max-width: 500px) {
+
+    .card {
+        padding: 24px;
+        border-radius: 18px;
+    }
+
+    .card-header {
+        gap: 14px;
+    }
+
+    .lamp-icon {
+        width: 50px;
+        height: 50px;
+
+        font-size: 26px;
+    }
+
+    .card-header h1 {
+        font-size: 19px;
+    }
+
+    .card-header p {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Controle de Iluminação</title>
+    <link rel="stylesheet" href="/admin/assets/style.css">
+</head>
+<body>
+    <main class="page">
+        <section class="card">
+            <header class="card-header">
+                <div class="lamp-icon">💡</div>
+                <div>
+                    <h1>PI VI - Controle de iluminação</h1>
+                    <p>Configure os horários da iluminação</p>
+                </div>
+            </header>
+
+            <form id="lightingForm">
+                <div class="form-group">
+                    <label for="ligar">
+                        <span class="label-icon">☀️</span>
+                        Ligar
+                    </label>
+                    <input
+                        type="time"
+                        id="ligar"
+                        name="ligar"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="desligar">
+                        <span class="label-icon">🌙</span>
+                        Desligar
+                    </label>
+                    <input
+                        type="time"
+                        id="desligar"
+                        name="desligar"
+                        required
+                    >
+                </div>
+
+                <div id="message" class="message" role="status"></div>
+
+                <div class="actions">
+                    <button
+                        type="button"
+                        class="btn btn-cancel"
+                        id="cancelButton"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button type="submit" class="btn btn-save">
+                        <span>✓</span> Salvar
+                    </button>
+                </div>
+            </form>
+
+            <div class="actions">
+                <button
+                    type="button"
+                    class="btn btn-cancel"
+                    id="logoutButton"
+                >
+                    Sair da área administrativa
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="/admin/assets/app.js"></script>
+</body>
+</html>

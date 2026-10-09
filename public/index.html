@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>Microclima em Dia - Mini Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>Microclima em Dia</h1>
+      <div class="cards">
+        <div class="card">
+          <div class="icon temp">
+            <i class="fa-solid fa-temperature-high"></i>
+          </div>
+          <h2>Temperatura</h2>
+          <div class="valor temp">
+            <span id="tempValor">28</span>°C
+            <span id="tempTrend" class="tendencia">
+              <i class="fa-solid fa-minus"></i>
+            </span>
+            <span id="tempDelta" class="delta"></span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="icon hum">
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+          <h2>Umidade</h2>
+          <div class="valor hum">
+            <span id="humValor">20</span>%
+            <span id="humTrend" class="tendencia">
+              <i class="fa-solid fa-minus"></i>
+            </span>
+            <span id="humDelta" class="delta"></span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="icon lux">
+            <i class="fa-solid fa-sun"></i>
+          </div>
+          <h2>Luminosidade</h2>
+          <div class="valor lux">
+            <span id="luxValor">80</span>%
+            <span id="luxTrend" class="tendencia">
+              <i class="fa-solid fa-minus"></i>
+            </span>
+            <span id="luxDelta" class="delta"></span>
+          </div>
+        </div>
+      </div>
+      <div class="timestamp">
+        Última leitura: <span id="timestamp">--:--:--</span>
+      </div>
+      <table>
+        <tr>
+        <th></th>
+        <th>Atual</th>
+          <th>-1</th>
+          <th>-2</th>
+          <th>-3</th>
+          <th>-4</th>
+        </tr>
+        <tr id="rowTemp">
+          <td><b>Temperatura</b></td>
+          <td>28</td><td>28</td><td>28.5</td><td>28.5</td><td>29</td>
+        </tr>
+        <tr id="rowHum">
+          <td><b>Umidade</b></td>
+          <td>20.0</td><td>20.5</td><td>20.5</td><td>21</td><td>21</td>
+        </tr>
+        <tr id="rowLux">
+          <td><b>Luminosidade</b></td>
+          <td>80.0</td><td>85.3</td><td>90.8</td><td>95.2</td><td>98.7</td>
+        </tr>
+      </table>
+      <br>
+      <div class="graficos">
+        <div class="grafico-card">
+          <h2>Últimas 24 horas</h2>
+          <div class="canvas-wrapper">
+            <canvas id="grafico24h"></canvas>
+          </div>
+        </div>
+
+        <div class="grafico-card">
+          <h2>Últimos 7 dias</h2>
+          <div class="canvas-wrapper">
+            <canvas id="grafico7d"></canvas>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login administrativo - Microclima em Dia</title>
+    <link rel="stylesheet" href="/admin/assets/style.css">
+</head>
+<body>
+    <main class="page">
+        <section class="card">
+            <header class="card-header">
+                <div class="lamp-icon">🔐</div>
+                <div>
+                    <h1>Área administrativa</h1>
+                    <p>Entre para configurar a iluminação</p>
+                </div>
+            </header>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Usuário</label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <div id="message" class="message" role="alert"></div>
+
+                <div class="actions">
+                    <button type="submit" class="btn btn-save">
+                        Entrar
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="/admin/assets/login.js"></script>
+</body>
+</html>

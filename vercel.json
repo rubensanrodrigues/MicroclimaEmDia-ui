@@ -1,0 +1,12 @@
+{
+  "crons": [
+    {
+      "path": "/jobs/refresh-hora",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/jobs/refresh-dia",
+      "schedule": "0 * * * *"
+    }
+  ]
+}

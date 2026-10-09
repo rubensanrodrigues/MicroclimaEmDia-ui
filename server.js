@@ -12,6 +12,9 @@ const path = require("path");
 const { Pool } = require("pg");
 
 const app = express();
+
+app.set("trust proxy", 1);
+
 const PORT = process.env.PORT || 3000;
 
 // Sensor padrão utilizado pelo dashboard
@@ -468,6 +471,14 @@ app.post("/admin/login", (req, res, next) => {
             erro: "Usuário ou senha inválidos."
         });
     }
+
+    console.log("Diagnóstico de sessão:", {
+        nodeEnv: process.env.NODE_ENV,
+        secureCookie: process.env.NODE_ENV === "production",
+        protocol: req.protocol,
+        secureRequest: req.secure,
+        forwardedProto: req.get("x-forwarded-proto")
+    });
 
     // Regenera a sessão para reduzir risco de session fixation
     req.session.regenerate((err) => {

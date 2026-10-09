@@ -472,14 +472,6 @@ app.post("/admin/login", (req, res, next) => {
         });
     }
 
-    console.log("Diagnóstico de sessão:", {
-        nodeEnv: process.env.NODE_ENV,
-        secureCookie: process.env.NODE_ENV === "production",
-        protocol: req.protocol,
-        secureRequest: req.secure,
-        forwardedProto: req.get("x-forwarded-proto")
-    });
-
     // Regenera a sessão para reduzir risco de session fixation
     req.session.regenerate((err) => {
         if (err) {

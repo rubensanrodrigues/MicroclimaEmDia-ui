@@ -166,7 +166,6 @@ async function buscarHistorico24h(sensor_id) {
 
             time.push(
                 row.hora.toLocaleTimeString("pt-BR", {
-                    timeZone: "America/Sao_Paulo",
                     hour: "2-digit",
                     minute: "2-digit"
                 })
@@ -245,7 +244,6 @@ async function buscarHistorico7d(sensor_id) {
 
             time.push(
                 row.dia.toLocaleDateString("pt-BR", {
-                    timeZone: "America/Sao_Paulo",
                     day: "2-digit",
                     month: "2-digit"
                 })
